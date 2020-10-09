@@ -285,11 +285,12 @@ LeakSensor = Vuotoanturi
 PushButton = Painike
 VideoCamera = Videokamera
 Camera = Kamera
-TemperatureSensor = Lämpötilasensori
+TemperatureSensor = Lämpötila-anturi
 HumiditySensor = Kosteusanturi
 Alarm = Hälytin
 Thermostat = Termostaatti
 Lock = Lukko
+BarometricPressureSensor = Ilmanpaineanturi
 Custom = Mukautettu esine
 Thing = Esine
 

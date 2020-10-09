@@ -293,6 +293,7 @@ Lock = Lock
 BarometricPressureSensor = Barometric Pressure Sensor
 Custom = Custom Thing
 Thing = Thing
+AirQualitySensor = Air quality sensor
 
 ## Properties
 
@@ -323,6 +324,9 @@ jammed = Jammed
 unknown = Unknown
 active = Active
 inactive = Inactive
+humidity = Humidity
+concentration = Concentration
+density = Density
 
 ## Domain Setup
 

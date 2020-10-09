@@ -3,7 +3,7 @@
 set -x
 
 # Install Python add-on bindings
-pip3 install git+https://github.com/mozilla-iot/gateway-addon-python#egg=gateway_addon
+pip3 install git+https://github.com/WebThingsIO/gateway-addon-python#egg=gateway_addon
 
 # Allow python3 to use the Bluetooth adapter
 setcap cap_net_raw+eip $(eval readlink -f $(which python3))
@@ -11,7 +11,7 @@ setcap cap_net_raw+eip $(eval readlink -f $(which python3))
 su - ${FIRST_USER_NAME} << 'EOF'
 set -e -x
 
-NVM_VERSION="v0.35.2"
+NVM_VERSION="v0.36.0"
 NODE_VERSION="--lts=dubnium"
 
 # Install and configure nvm

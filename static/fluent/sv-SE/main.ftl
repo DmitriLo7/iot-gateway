@@ -293,6 +293,7 @@ Lock = Lås
 BarometricPressureSensor = Barometrisk trycksensor
 Custom = Anpassad enhet
 Thing = Enhet
+AirQualitySensor = Luftkvalitetssensor
 
 ## Properties
 
@@ -323,6 +324,9 @@ jammed = Fastnat
 unknown = Okänd
 active = Aktiv
 inactive = Inaktiv
+humidity = Luftfuktighet
+concentration = Koncentration
+density = Täthet
 
 ## Domain Setup
 

@@ -293,6 +293,7 @@ Lock = Замок
 BarometricPressureSensor = Барометричний датчик тиску
 Custom = Власна річ
 Thing = Річ
+AirQualitySensor = Датчик якості повітря
 
 ## Properties
 
@@ -323,6 +324,9 @@ jammed = Заклинило
 unknown = Невідомо
 active = Активний
 inactive = Неактивний
+humidity = Вологість
+concentration = Насиченість
+density = Щільність
 
 ## Domain Setup
 

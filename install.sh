@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-[ "$NVM_VERSION" != "" ] || NVM_VERSION="v0.35.2"
+[ "$NVM_VERSION" != "" ] || NVM_VERSION="v0.36.0"
 [ "$NODE_VERSION" != "" ] || NODE_VERSION="--lts=dubnium"
 [ "$USER" != "" ] || USER="pi"
 [ "$HOME" != "" ] || HOME="/home/${USER}"
@@ -37,7 +37,7 @@ sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 
 # Download and install the required node modules
 if [ ! -d "gateway" ]; then
-    git clone https://github.com/mozilla-iot/gateway.git
+    git clone https://github.com/WebThingsIO/gateway.git
 fi
 cd gateway
 npm ci

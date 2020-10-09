@@ -293,6 +293,7 @@ Lock = Zár
 BarometricPressureSensor = Barometrikus nyomásérzékelő
 Custom = Egyéni dolog
 Thing = Dolog
+AirQualitySensor = Levegőminőség érzékelő
 
 ## Properties
 
@@ -323,6 +324,9 @@ jammed = Elakadt
 unknown = Ismeretlen
 active = Aktív
 inactive = Inaktív
+humidity = Páratartalom
+concentration = Koncentráció
+density = Sűrűség
 
 ## Domain Setup
 

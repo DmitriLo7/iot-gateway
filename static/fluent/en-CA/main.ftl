@@ -270,6 +270,7 @@ context-menu-remove = Remove
 
 ## Capabilities
 
+AirQualitySensor = Air quality sensor
 OnOffSwitch = On/Off Switch
 MultiLevelSwitch = Multi Level Switch
 ColorControl = Colour Control
@@ -323,6 +324,9 @@ jammed = Jammed
 unknown = Unknown
 active = Active
 inactive = Inactive
+humidity = Humidity
+concentration = Concentration
+density = Density
 
 ## Domain Setup
 

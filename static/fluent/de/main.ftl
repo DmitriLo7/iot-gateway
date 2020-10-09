@@ -293,6 +293,7 @@ Lock = Schloss
 BarometricPressureSensor = Barometer
 Custom = Benutzerdefiniertes Gerät
 Thing = Ding
+AirQualitySensor = Luftqualitätssensor
 
 ## Properties
 
@@ -323,6 +324,9 @@ jammed = Verklemmt
 unknown = Unbekannt
 active = Aktiv
 inactive = Inaktiv
+humidity = Luftfeuchtigkeit
+concentration = Konzentration
+density = Dichte
 
 ## Domain Setup
 
