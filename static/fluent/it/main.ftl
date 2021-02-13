@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Rete domestica
-network-settings-internet-image =
-    .alt = Internet
 network-settings-configure = Configura
-network-settings-internet-wan = Internet (WAN)
-network-settings-wan-mode = Modalità
-network-settings-home-network-lan = Rete domestica (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = Indirizzo IP
 network-settings-dhcp = Automatico (DHCP)
 network-settings-static = Manuale (IP statico)
-network-settings-pppoe = Ponte (PPPoE)
 network-settings-static-ip-address = Indirizzo IP statico
 network-settings-network-mask = Maschera di rete
 network-settings-gateway = Gateway
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Password
 network-settings-show-password = Mostra password
 network-settings-connect = Connetti
-network-settings-username = Nome utente
-network-settings-password = Password
-network-settings-router-ip = Indirizzo IP del router
-network-settings-dhcp-server = Server DHCP
-network-settings-enable-wifi = Attiva Wi-Fi
-network-settings-network-name = Nome di rete (SSID)
 wireless-connected = Connesso
 wireless-icon =
     .alt = Rete Wi-Fi
 network-settings-changing = Modifica delle impostazioni di rete in corso. L’operazione può richiedere fino a un minuto.
 failed-ethernet-configure = Impossibile configurare ethernet.
 failed-wifi-configure = Impossibile configurare Wi-Fi.
-failed-wan-configure = Impossibile configurare WAN.
-failed-lan-configure = Impossibile configurare LAN.
-failed-wlan-configure = Impossibile configurare WLAN.
 
 ## User Settings
 
@@ -293,6 +275,8 @@ Lock = Serratura
 BarometricPressureSensor = Sensore di pressione barometrica
 Custom = Oggetto personalizzato
 Thing = Oggetto
+AirQualitySensor = Sensore di qualità dell’aria
+SmokeSensor = Sensore di fumo
 
 ## Properties
 
@@ -324,6 +308,9 @@ unknown = Sconosciuto
 active = Attivo
 inactive = Inattivo
 humidity = Umidità
+concentration = Concentrazione
+density = Densità
+smoke = Fumo
 
 ## Domain Setup
 
@@ -405,6 +392,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -445,7 +434,6 @@ events-not-found = Questo oggetto non ha eventi.
 
 add-addons =
     .aria-label = Trova nuovi componenti aggiuntivi
-author-unknown = Sconosciuto
 disable = Disattiva
 enable = Attiva
 by = di
@@ -528,8 +516,8 @@ tunnel-setup-welcome = Benvenuto
 tunnel-setup-choose-address = Scegli un indirizzo web sicuro per il tuo gateway:
 tunnel-setup-input-subdomain =
     .placeholder = sottodominio
-tunnel-setup-opt-in = Desidero ricevere aggiornamenti sulle nuove funzionalità e sulle opportunità di collaborazione.
-tunnel-setup-privacy-policy = Informativa sulla privacy
+tunnel-setup-email-opt-in = Desidero ricevere aggiornamenti con le ultime novità su WebThings.
+tunnel-setup-agree-privacy-policy = Accetta l’<a data-l10n-name="tunnel-setup-privacy-policy-link">informativa sulla privacy</a> e i <a data-l10n-name="tunnel-setup-tos-link">termini di servizio</a> di WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Token di recupero
 tunnel-setup-error = Si è verificato un errore durante l’impostazione del sottodominio.
@@ -560,20 +548,6 @@ local-token-your-token = Il token locale è: <a data-l10n-name="local-token-jwt"
 local-token-use-it = Permette una comunicazione sicura con il gateway, con <a data-l10n-name="local-token-bearer-type">autorizzazione tipo Bearer</a>.
 local-token-copy-token = Copia token
 
-## Router Setup Page
-
-router-setup-title = Configurazione del router — { -webthings-gateway-brand }
-router-setup-header = Crea una nuova rete Wi-Fi
-router-setup-input-ssid =
-    .placeholder = Nome della rete
-router-setup-input-password =
-    .placeholder = Password
-router-setup-input-confirm-password =
-    .placeholder = Conferma password
-router-setup-create =
-    .value = Crea
-router-setup-password-mismatch = Le password devono essere identiche
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Configurazione Wi-Fi — { -webthings-gateway-brand }
@@ -598,9 +572,6 @@ connecting-skipped = Il gateway è in fase di avvio. Connettersi alla stessa ret
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Creazione della rete Wi-Fi — { -webthings-gateway-brand }
-creating-header = Creazione della rete Wi-Fi…
-creating-content = Connettersi a { $ssid } con la password appena creata, quindi aprire { $gateway-link } o { $ip-link } nel browser.
 
 ## UI Updates
 

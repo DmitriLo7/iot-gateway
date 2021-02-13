@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = ホームネットワーク
-network-settings-internet-image =
-    .alt = インターネット
 network-settings-configure = 設定変更
-network-settings-internet-wan = インターネット (WAN)
-network-settings-wan-mode = モード
-network-settings-home-network-lan = ホームネットワーク (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = IP アドレス
 network-settings-dhcp = 自動 (DHCP)
 network-settings-static = 手動 (固定 IP)
-network-settings-pppoe = ブリッジ (PPPoE)
 network-settings-static-ip-address = 固定 IP アドレス
 network-settings-network-mask = ネットワークマスク
 network-settings-gateway = ゲートウェイ
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = パスワード
 network-settings-show-password = パスワードを開示
 network-settings-connect = 接続
-network-settings-username = ユーザー名
-network-settings-password = パスワード
-network-settings-router-ip = ルーターの IP アドレス
-network-settings-dhcp-server = DHCP サーバー
-network-settings-enable-wifi = Wi-Fi を有効化
-network-settings-network-name = ネットワーク名 (SSID)
 wireless-connected = 接続しました
 wireless-icon =
     .alt = Wi-Fi ネットワーク
 network-settings-changing = ネットワーク設定を変更しています。しばらくお待ちください。
 failed-ethernet-configure = Ethernet の設定変更に失敗しました。
 failed-wifi-configure = Wi-Fi の設定変更に失敗しました。
-failed-wan-configure = WAN の設定変更に失敗しました。
-failed-lan-configure = LAN の設定変更に失敗しました。
-failed-wlan-configure = WLAN の設定変更に失敗しました。
 
 ## User Settings
 
@@ -293,6 +275,8 @@ Lock = 施錠
 BarometricPressureSensor = 気圧センサー
 Custom = カスタム Thing
 Thing = Thing
+AirQualitySensor = 大気質センサー
+SmokeSensor = 煙センサー
 
 ## Properties
 
@@ -323,6 +307,10 @@ jammed = 引っかかりがあります
 unknown = 状態不明
 active = 動作しています
 inactive = 停止しています
+humidity = 湿度
+concentration = 濃度
+density = 密度
+smoke = 煙
 
 ## Domain Setup
 
@@ -404,6 +392,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -444,7 +434,6 @@ events-not-found = この Thing にはイベントがありません。
 
 add-addons =
     .aria-label = 新しいアドオンを検索
-author-unknown = 不明
 disable = 無効化
 enable = 有効化
 by = 作者:
@@ -527,8 +516,8 @@ tunnel-setup-welcome = ようこそ
 tunnel-setup-choose-address = ゲートウェイの安全なウェブアドレスを指定してください:
 tunnel-setup-input-subdomain =
     .placeholder = サブドメイン
-tunnel-setup-opt-in = 新機能や貢献の機会についての情報を受け取る。
-tunnel-setup-privacy-policy = 個人情報保護方針
+tunnel-setup-email-opt-in = WebThings についてのニュースを受け取る。
+tunnel-setup-agree-privacy-policy = WebThings の <a data-l10n-name="tunnel-setup-privacy-policy-link">プライバシーポリシー</a> および <a data-l10n-name="tunnel-setup-tos-link">サービス利用規約</a> に同意する。
 tunnel-setup-input-reclamation-token =
     .placeholder = 再利用トークン
 tunnel-setup-error = サブドメインのセットアップ中にエラーが発生しました。
@@ -559,20 +548,6 @@ local-token-your-token = あなたのローカルトークンは、この <a dat
 local-token-use-it = このトークンを使用して <a data-l10n-name="local-token-bearer-type">持参人認証</a> (Bearer-type Authorization) でゲートウェイと安全に通信します。
 local-token-copy-token = トークンをコピー
 
-## Router Setup Page
-
-router-setup-title = ルーターのセットアップ — { -webthings-gateway-brand }
-router-setup-header = 新しい Wi-Fi ネットワークの作成
-router-setup-input-ssid =
-    .placeholder = ネットワーク名
-router-setup-input-password =
-    .placeholder = パスワード
-router-setup-input-confirm-password =
-    .placeholder = パスワード確認
-router-setup-create =
-    .value = 作成
-router-setup-password-mismatch = パスワードが一致しません
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Wi-Fi セットアップ — { -webthings-gateway-brand }
@@ -597,9 +572,6 @@ connecting-skipped = ゲートウェイの動作を開始しました。同じ�
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Wi-Fi ネットワークの作成 — { -webthings-gateway-brand }
-creating-header = Wi-Fi ネットワークを作成中…
-creating-content = 作成したパスワードを入力して { $ssid } に接続し、ウェブブラウザーで { $gateway-link } または { $ip-link } を開いてください。
 
 ## UI Updates
 

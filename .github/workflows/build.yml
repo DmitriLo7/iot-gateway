@@ -19,30 +19,33 @@ jobs:
           14,
         ]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install system dependencies
         run: |
           sudo apt -qq update
-          sudo apt install -y firefox python python-setuptools python3 python3-setuptools
+          sudo apt install -y google-chrome-stable
       - name: Install node dependencies
         run: |
           npm ci
-      - name: Run build
+      - name: Check formatting
         run: |
-          ./node_modules/.bin/webpack
+          npx prettier -u -c '*.ts' '*.js' config src static tools
       - name: Lint with eslint and stylelint
         run: |
           npm run lint
+      - name: Run build
+        run: |
+          npm run build
       - name: Run integration tests
         run: |
           ./tools/make-self-signed-cert.sh
-          ./node_modules/.bin/jest --runInBand --coverage --detectOpenHandles
-          ./node_modules/.bin/codecov
+          npm run jest
+          npm run coverage
         env:
-          MOZIOT_HOME: "${HOME}/.mozilla-iot/test"
+          WEBTHINGS_HOME: "${HOME}/.webthings/test"
           NODE_TLS_REJECT_UNAUTHORIZED: 0
       - name: Check dependencies
         run: |

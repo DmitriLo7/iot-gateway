@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wifi
 network-settings-wifi = Wifi
-network-settings-home-network-image =
-    .alt = Thuisnetwerk
-network-settings-internet-image =
-    .alt = Internet
 network-settings-configure = Configureren
-network-settings-internet-wan = Internet (WAN)
-network-settings-wan-mode = Modus
-network-settings-home-network-lan = Thuisnetwerk (LAN)
-network-settings-wifi-wlan = Wifi (WLAN)
 network-settings-ip-address = IP-adres
 network-settings-dhcp = Automatisch (DHCP)
 network-settings-static = Handmatig (Statisch IP-adres)
-network-settings-pppoe = Bridge (PPPoE)
 network-settings-static-ip-address = Statisch IP-adres
 network-settings-network-mask = Netwerkmask
 network-settings-gateway = Gateway
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Wachtwoord
 network-settings-show-password = Wachtwoord tonen
 network-settings-connect = Verbinden
-network-settings-username = Gebruikersnaam
-network-settings-password = Wachtwoord
-network-settings-router-ip = IP-adres router
-network-settings-dhcp-server = DHCP-server
-network-settings-enable-wifi = Wifi inschakelen
-network-settings-network-name = Netwerknaam (SSID)
 wireless-connected = Verbonden
 wireless-icon =
     .alt = Wifi-netwerk
 network-settings-changing = Netwerkinstellingen wijzigen. Dit kan even duren.
 failed-ethernet-configure = Ethernet instellen mislukt.
 failed-wifi-configure = Wifi instellen mislukt.
-failed-wan-configure = WAN instellen mislukt.
-failed-lan-configure = LAN instellen mislukt.
-failed-wlan-configure = WLAN instellen mislukt.
 
 ## User Settings
 
@@ -294,6 +276,7 @@ BarometricPressureSensor = Barometrische druksensor
 Custom = Aangepast Thing
 Thing = Thing
 AirQualitySensor = Luchtkwaliteitssensor
+SmokeSensor = Rookmelder
 
 ## Properties
 
@@ -327,6 +310,7 @@ inactive = Inactief
 humidity = Vochtigheid
 concentration = Concentratie
 density = Dichtheid
+smoke = Rook
 
 ## Domain Setup
 
@@ -408,6 +392,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -448,7 +434,6 @@ events-not-found = Dit Thing heeft geen gebeurtenissen.
 
 add-addons =
     .aria-label = Nieuwe add-ons zoeken
-author-unknown = Onbekend
 disable = Uitschakelen
 enable = Inschakelen
 by = door
@@ -531,8 +516,8 @@ tunnel-setup-welcome = Welkom
 tunnel-setup-choose-address = Kies een veilig webadres voor uw gateway:
 tunnel-setup-input-subdomain =
     .placeholder = subdomein
-tunnel-setup-opt-in = Houd mij op de hoogte van nieuwe functies en mogelijkheden om bij te dragen.
-tunnel-setup-privacy-policy = Privacybeleid
+tunnel-setup-email-opt-in = Houd mij op de hoogte met nieuws over WebThings.
+tunnel-setup-agree-privacy-policy = Instemmen met het <a data-l10n-name="tunnel-setup-privacy-policy-link">Privacybeleid</a> en de <a data-l10n-name="tunnel-setup-tos-link">Servicevoorwaarden</a> van WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Reclamatietoken
 tunnel-setup-error = Er is een fout opgetreden bij het instellen van het subdomein.
@@ -563,20 +548,6 @@ local-token-your-token = Uw lokale token is dit <a data-l10n-name="local-token-j
 local-token-use-it = Gebruik dit om beveiligd met de gateway te praten, met <a data-l10n-name="local-token-bearer-type">Bearer-type-autorisatie</a>.
 local-token-copy-token = Token kopiëren
 
-## Router Setup Page
-
-router-setup-title = Routerinstellingen – { -webthings-gateway-brand }
-router-setup-header = Nieuw wifi-netwerk instellen
-router-setup-input-ssid =
-    .placeholder = Netwerknaam
-router-setup-input-password =
-    .placeholder = Wachtwoord
-router-setup-input-confirm-password =
-    .placeholder = Bevestig wachtwoord
-router-setup-create =
-    .value = Aanmaken
-router-setup-password-mismatch = Wachtwoorden moeten overeenkomen
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Wifi-instellingen – { -webthings-gateway-brand }
@@ -601,9 +572,6 @@ connecting-skipped = De gateway wordt opgestart. Navigeer in uw webbrowser naar 
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Wifi-netwerk maken – { -webthings-gateway-brand }
-creating-header = Wifi-netwerk maken…
-creating-content = Verbind met { $ssid } met het zojuist ingestelde wachtwoord, navigeer daarna in uw webbrowser naar { $gateway-link } of { $ip-link }.
 
 ## UI Updates
 

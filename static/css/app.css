@@ -5,42 +5,48 @@
   font-family: 'Zilla Slab';
   font-weight: 400;
   font-style: normal;
-  src: url('/fonts/ZillaSlab-Regular.woff2') format('woff2'), url('/fonts/ZillaSlab-Regular.woff') format('woff');
+  src: url('/fonts/ZillaSlab-Regular.woff2') format('woff2'),
+    url('/fonts/ZillaSlab-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Zilla Slab';
   font-weight: 700;
   font-style: normal;
-  src: url('/fonts/ZillaSlab-Bold.woff2') format('woff2'), url('/fonts/ZillaSlab-Bold.woff') format('woff');
+  src: url('/fonts/ZillaSlab-Bold.woff2') format('woff2'),
+    url('/fonts/ZillaSlab-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Zilla Slab';
   font-weight: 400;
   font-style: italic;
-  src: url('/fonts/ZillaSlab-RegularItalic.woff2') format('woff2'), url('/fonts/ZillaSlab-RegularItalic.woff') format('woff');
+  src: url('/fonts/ZillaSlab-RegularItalic.woff2') format('woff2'),
+    url('/fonts/ZillaSlab-RegularItalic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Zilla Slab';
   font-weight: 700;
   font-style: italic;
-  src: url('/fonts/ZillaSlab-BoldItalic.woff2') format('woff2'), url('/fonts/ZillaSlab-BoldItalic.woff') format('woff');
+  src: url('/fonts/ZillaSlab-BoldItalic.woff2') format('woff2'),
+    url('/fonts/ZillaSlab-BoldItalic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-weight: 400;
   font-style: normal;
-  src: url('/fonts/opensans-regular.woff2') format('woff2'), url('/fonts/opensans-regular.woff') format('woff');
+  src: url('/fonts/opensans-regular.woff2') format('woff2'),
+    url('/fonts/opensans-regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-weight: 700;
   font-style: normal;
-  src: url('/fonts/opensans-bold.woff2') format('woff2'), url('/fonts/opensans-bold.woff') format('woff');
+  src: url('/fonts/opensans-bold.woff2') format('woff2'),
+    url('/fonts/opensans-bold.woff') format('woff');
 }
 
 html {
@@ -79,6 +85,8 @@ section.selected {
   display: block;
 }
 
+input:not([type]),
+input[type=''],
 input[type='number'],
 input[type='text'],
 input[type='password'],
@@ -118,8 +126,10 @@ input[type='email'] {
   background-color: #658196;
 }
 
-.text-button:disabled {
-  background-color: #8dbee0;
+.text-button:disabled,
+.text-button:disabled:hover {
+  background-color: #597285;
+  opacity: 0.5;
 }
 
 .icon-button {
@@ -174,14 +184,14 @@ h6 {
 
 #menu-wordmark {
   position: fixed;
-  top: 3rem;
-  left: 10rem;
-  height: 3.6rem;
+  width: 20rem;
+  top: 4rem;
+  left: 9.5rem;
 }
 
 #update-message-area {
   position: fixed;
-  top: 3rem;
+  top: 2rem;
   width: 33%;
   left: calc(33% - 1rem);
   background-color: rgba(76, 124, 160, 0.6);
@@ -200,8 +210,10 @@ h6 {
 }
 
 #update-message-area > button {
+  height: 4rem;
   background-color: #48779a;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  margin: auto 0.5rem;
 }
 
 #update-message-area > button:hover,

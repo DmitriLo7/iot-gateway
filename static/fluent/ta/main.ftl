@@ -66,19 +66,10 @@ network-settings-ethernet = ஈத்தர்நெட்
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = முகப்பு பிணையம்
-network-settings-internet-image =
-    .alt = இணையதளம்
 network-settings-configure = கட்டமை
-network-settings-internet-wan = இணையதளம் (WAN)
-network-settings-wan-mode = முறை
-network-settings-home-network-lan = முகப்பு பிணையம் (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = IP முகவரி
 network-settings-dhcp = தானியங்கி (DHCP)
 network-settings-static = கைமுறை (நிலையான IP)
-network-settings-pppoe = பிணைய பாலம் (PPPoE)
 network-settings-static-ip-address = நிலையான IP முகவரி
 network-settings-network-mask = பிணைய முகமூடி
 network-settings-gateway = நுழைவாயில்
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = கடவுச்சொல்
 network-settings-show-password = கடவுச்சொல்லை காட்டு
 network-settings-connect = இணை
-network-settings-username = பயனர் பெயர்
-network-settings-password = கடவுச்சொல்
-network-settings-router-ip = திசைவி IP முகவரி
-network-settings-dhcp-server = DHCP சேவையகம்
-network-settings-enable-wifi = Wi-Fi யை செயல்படுத்து
-network-settings-network-name = பிணைய பெயர் (SSID)
 wireless-connected = இணைக்கப்பட்டது
 wireless-icon =
     .alt = Wi-Fi பிணையம்
 network-settings-changing = பிணைய அமைப்புகள் மாற்றப்படுகிறது . இதற்கு ஒரு நிமிடம் ஆகலாம்.
 failed-ethernet-configure = ஈத்தர்நெட்டை உள்ளமைப்பதில் தோல்வி.
 failed-wifi-configure = Wi-Fi ஐ உள்ளமைப்பதில் தோல்வி.
-failed-wan-configure = WAN ஐ உள்ளமைப்பதில் தோல்வி.
-failed-lan-configure = LAN ஐ உள்ளமைப்பதில் தோல்வி.
-failed-wlan-configure = WLAN ஐ உள்ளமைப்பதில் தோல்வி.
 
 ## User Settings
 
@@ -442,7 +424,6 @@ events-not-found = இந்த சாதனத்தில் எந்த ந�
 
 add-addons =
     .aria-label = கூடுதல் இணைப்புகளை கண்டறியவும்
-author-unknown = தெரியாதது
 disable = செயல்நீக்கு
 enable = செயல்படுத்து
 by = மூலம்
@@ -525,8 +506,6 @@ tunnel-setup-welcome = நல்வரவு!
 tunnel-setup-choose-address = உங்கள் நுழைவாயிலுக்கு பாதுகாப்பான வலை முகவரியைத் தேர்வுசெய்க:
 tunnel-setup-input-subdomain =
     .placeholder = துணை டொமைன்
-tunnel-setup-opt-in = புதிய அம்சங்கள் மற்றும் பங்களிப்பு வாய்ப்புகள் குறித்து என்னைப் புதுப்பிக்கவும்.
-tunnel-setup-privacy-policy = தனியுரிமை கொள்கை
 tunnel-setup-input-reclamation-token =
     .placeholder = மீட்பு டோக்கன்
 tunnel-setup-error = துணை டொமைனை அமைக்கும் போது பிழை ஏற்பட்டுள்ளது .
@@ -556,20 +535,6 @@ local-token-header = உள் அடையாள சேவை
 local-token-your-token = உங்கள் உள் அடையாளம் இந்த <a data-l10n-name="local-token-jwt"> JSON Web Token</a> தான் :
 local-token-use-it = நுழைவாயிலுடன் பாதுகாப்பாக பேச இந்த <a data-l10n-name="local-token-bearer-type"> Bearer-type அங்கீகாரத்தை</a> பயன்படுத்தவும்.
 
-## Router Setup Page
-
-router-setup-title = திசைவி அமைப்பு — { -webthings-gateway-brand }
-router-setup-header = புதிய Wi-Fi நெட்வொர்க்கை உருவாக்கவும்
-router-setup-input-ssid =
-    .placeholder = பிணைய பெயர்
-router-setup-input-password =
-    .placeholder = கடவுச்சொல்
-router-setup-input-confirm-password =
-    .placeholder = கடவுச்சொல்லை உறுதிசெய்
-router-setup-create =
-    .value = உருவாக்கு
-router-setup-password-mismatch = கடவுச்சொற்கள் பொருந்த வேண்டும்
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Wi-Fi அமைப்பு — { -webthings-gateway-brand }
@@ -594,9 +559,6 @@ connecting-skipped = நுழைவாயில் இப்போது தொ
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Wi-Fi நெட்வொர்க்கை உருவாக்குகிறது — { -webthings-gateway-brand }
-creating-header = Wi-Fi வைஃபை நெட்வொர்க்கை உருவாக்குகிறது…
-creating-content = நீங்கள் உருவாக்கிய கடவுச்சொல்லை வைத்து, இந்த  { $ssid } உடன்  இணையுங்கள் ,பின்னர் உங்கள் வலை உலாவியில்  { $gateway-link } or { $ip-link } க்கு செல்லவும்.
 
 ## UI Updates
 

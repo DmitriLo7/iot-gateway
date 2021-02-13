@@ -2,12 +2,16 @@
 
 set -e -x
 
-MOZIOT_HOME="${MOZIOT_HOME:=${HOME}/.mozilla-iot}"
+WEBTHINGS_HOME="${WEBTHINGS_HOME:=${HOME}/.webthings}"
 args=""
 start_task="run-only"
 
 is_container() {
   if [ -f /.dockerenv ]; then
+    return 0
+  fi
+
+  if [ -f /run/.containerenv ]; then
     return 0
   fi
 
@@ -47,20 +51,26 @@ if ! is_container; then
   fi
 else
   _node_version=$(node --version | egrep -o '[0-9]+' | head -n1)
-  if [[ ! -f "${MOZIOT_HOME}/.node_version" ||
-        "$(< "${MOZIOT_HOME}/.node_version")" != "${_node_version}" ]]; then
-    cd "${HOME}/mozilla-iot/gateway"
-    mkdir -p "${MOZIOT_HOME}/config"
+  if [[ ! -f "${WEBTHINGS_HOME}/.node_version" ||
+        "$(< "${WEBTHINGS_HOME}/.node_version")" != "${_node_version}" ]]; then
+    cd "${HOME}/webthings/gateway"
+    mkdir -p "${WEBTHINGS_HOME}/config"
     ./tools/update-addons.sh
     cd -
-    echo "${_node_version}" > "${MOZIOT_HOME}/.node_version"
+    echo "${_node_version}" > "${WEBTHINGS_HOME}/.node_version"
   fi
 fi
 
-mkdir -p "${MOZIOT_HOME}/log"
+if [[ "$WEBTHINGS_HOME" == "$HOME/.webthings" &&
+      -d "$HOME/.mozilla-iot" &&
+      ! -e "$HOME/.webthings" ]]; then
+  mv "$HOME/.mozilla-iot" "$HOME/.webthings"
+fi
 
-if [ -f "${MOZIOT_HOME}/log/run-app.log" ]; then
-  rm -f "${MOZIOT_HOME}/log/run-app.log"
+mkdir -p "${WEBTHINGS_HOME}/log"
+
+if [ -f "${WEBTHINGS_HOME}/log/run-app.log" ]; then
+  rm -f "${WEBTHINGS_HOME}/log/run-app.log"
 fi
 
 run_app

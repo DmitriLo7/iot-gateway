@@ -66,19 +66,10 @@ network-settings-ethernet = Жичана (етернет)
 network-settings-wifi-image =
     .alt = Бежична
 network-settings-wifi = Бежична (вај-фај)
-network-settings-home-network-image =
-    .alt = Кућна мрежа
-network-settings-internet-image =
-    .alt = Интернет
 network-settings-configure = Подеси
-network-settings-internet-wan = Интернет (WAN)
-network-settings-wan-mode = Режим
-network-settings-home-network-lan = Кућна мрежа (LAN)
-network-settings-wifi-wlan = Бежична (WLAN)
 network-settings-ip-address = ИП адреса
 network-settings-dhcp = Самостално (DHCP)
 network-settings-static = Ручно (Статичка ИП)
-network-settings-pppoe = Мост (PPPoE)
 network-settings-static-ip-address = Статичка ИП адреса
 network-settings-network-mask = Мрежна маска
 network-settings-gateway = Мрежни пролаз
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Лозинка
 network-settings-show-password = Прикажи лозинку
 network-settings-connect = Повежи се
-network-settings-username = Корисничко
-network-settings-password = Лозинка
-network-settings-router-ip = ИП адреса рутера
-network-settings-dhcp-server = DHCP сервер
-network-settings-enable-wifi = Омогући бежичну
-network-settings-network-name = Назив мреже (SSID)
 wireless-connected = Повезан
 wireless-icon =
     .alt = Бежична мрежа
 network-settings-changing = Мењам подешавања мреже. Ово може потрајати који минут.
 failed-ethernet-configure = Нисам успео да подесим жичану везу.
 failed-wifi-configure = Нисам успео да подесим бежичну везу.
-failed-wan-configure = Нисам успео да подесим WAN.
-failed-lan-configure = Нисам успео да подесим LAN.
-failed-wlan-configure = Нисам успео да подесим WLAN.
 
 ## User Settings
 
@@ -293,6 +275,8 @@ Lock = Брава
 BarometricPressureSensor = Сензор барометарског притиска
 Custom = Прилагођена справица
 Thing = Справица
+AirQualitySensor = Сензор квалитета ваздуха
+SmokeSensor = Детектор дима
 
 ## Properties
 
@@ -323,6 +307,10 @@ jammed = Заглављено
 unknown = Непознато
 active = Покренуто
 inactive = У мировању
+humidity = Влажност
+concentration = Концентрација
+density = Густина
+smoke = Дим
 
 ## Domain Setup
 
@@ -411,6 +399,8 @@ abbrev-minute = м
 abbrev-second = с
 abbrev-millisecond = мс
 abbrev-foot = ст.
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -451,7 +441,6 @@ events-not-found = Ова справица нема догађаја.
 
 add-addons =
     .aria-label = Пронађи нове додатке
-author-unknown = Непознато
 disable = Онемогући
 enable = Омогући
 by = од стране
@@ -534,8 +523,8 @@ tunnel-setup-welcome = Добро дошли
 tunnel-setup-choose-address = Изаберите безбедну веб адресу за ваш мрежни пролаз:
 tunnel-setup-input-subdomain =
     .placeholder = poddomen
-tunnel-setup-opt-in = Шаљите ми новости о новим стварима и о могућностима доприношења.
-tunnel-setup-privacy-policy = Политика приватности
+tunnel-setup-email-opt-in = Обавештавајте ме о WebThings новостима.
+tunnel-setup-agree-privacy-policy = Пристаните на WebThings<a data-l10n-name="tunnel-setup-privacy-policy-link">Политику приватности</a> и <a data-l10n-name="tunnel-setup-tos-link">Услове услуга</a>.
 tunnel-setup-input-reclamation-token =
     .placeholder = Жетон за повраћај
 tunnel-setup-error = Догодила се грешка приликом подешавања поддомена.
@@ -566,20 +555,6 @@ local-token-your-token = Ово је ваш локални жетон <a data-l1
 local-token-use-it = Користите га за безбедну комуникацију са овим мрежним пролазом, уз <a data-l10n-name="local-token-bearer-type">Bearer-type пуномоћје</a>.
 local-token-copy-token = Копирај токен
 
-## Router Setup Page
-
-router-setup-title = Подешавање рутера — { -webthings-gateway-brand }
-router-setup-header = Направите нову бежичну мрежу
-router-setup-input-ssid =
-    .placeholder = Назив мреже
-router-setup-input-password =
-    .placeholder = Лозинка
-router-setup-input-confirm-password =
-    .placeholder = Потврди лозинку
-router-setup-create =
-    .value = Направи
-router-setup-password-mismatch = Лозинке се морају подударати
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Подешавање бежичне — { -webthings-gateway-brand }
@@ -604,9 +579,6 @@ connecting-skipped = Мрежни пролаз се управо покреће.
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Стварање бежичне мреже — { -webthings-gateway-brand }
-creating-header = Правим бежичну мрежу…
-creating-content = Повежите се на мрежу { $ssid } са лозинком коју сте управо направили, па онда отворите страницу { $gateway-link } или ИП адресу { $ip-link } у вашем веб прегледачу.
 
 ## UI Updates
 

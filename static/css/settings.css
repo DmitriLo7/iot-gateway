@@ -99,10 +99,6 @@
   background-image: url('/images/domain-icon.png');
 }
 
-#domain-settings-mozilla-link {
-  background-image: url('/images/domain-icon.png');
-}
-
 #network-settings-link {
   background-image: url('/images/network.svg');
 }
@@ -210,7 +206,6 @@
 }
 
 #network-settings-client ul,
-#network-settings-router ul,
 #user-settings ul,
 #adapter-settings ul,
 #addon-main-settings ul,
@@ -250,7 +245,6 @@
 
 .network-settings-wrap ul li:last-child,
 #network-settings-client ul li:last-child,
-#network-settings-router ul li:last-child,
 #user-settings ul li:last-child,
 #adapter-settings ul li:last-child,
 #addon-settings ul li:last-child,
@@ -642,11 +636,22 @@
   padding: 2rem;
 }
 
+/* stylelint-disable no-descending-specificity */
+#enable-self-updates-checkbox + label::before,
+#domain-settings-local-checkbox + label::before,
+:root .transition-checkbox + label::before {
+  float: none;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+/* stylelint-enable no-descending-specificity */
+
 :root .update-checkbox,
 :root .network-checkbox,
 :root .user-checkbox,
 :root .developer-checkbox,
-:root .experiment-checkbox {
+:root .experiment-checkbox,
+:root .transition-checkbox {
   /* original check box is pushed outside the viewport */
   position: absolute;
   left: -1000em;
@@ -666,7 +671,8 @@
 /* stylelint-enable no-descending-specificity */
 
 /* stylelint-disable no-descending-specificity */
-:root .user-checkbox + label::before {
+:root .user-checkbox + label::before,
+:root .transition-checkbox + label::before {
   content: '';
   display: inline-block;
   width: 3rem;
@@ -697,7 +703,8 @@
 :root .network-checkbox:checked + label::before,
 :root .user-checkbox:checked + label::before,
 :root .developer-checkbox:checked + label::before,
-:root .experiment-checkbox:checked + label::before {
+:root .experiment-checkbox:checked + label::before,
+:root .transition-checkbox:checked + label::before {
   background-position: 0 -3rem;
 }
 /* stylelint-enable no-descending-specificity */
@@ -707,7 +714,8 @@
 :root .network-checkbox:disabled + label::before,
 :root .user-checkbox:disabled + label::before,
 :root .developer-checkbox:disabled + label::before,
-:root .experiment-checkbox:disabled + label::before {
+:root .experiment-checkbox:disabled + label::before,
+:root .transition-checkbox:disabled + label::before {
   background-position: 0 -6rem;
 }
 /* stylelint-enable no-descending-specificity */
@@ -717,17 +725,11 @@
 :root .network-checkbox:checked:disabled + label::before,
 :root .user-checkbox:checked:disabled + label::before,
 :root .developer-checkbox:checked:disabled + label::before,
-:root .experiment-checkbox:checked:disabled + label::before {
+:root .experiment-checkbox:checked:disabled + label::before,
+:root .transition-checkbox:checked:disabled + label::before {
   background-position: 0 -9rem;
 }
 /* stylelint-enable no-descending-specificity */
-
-#enable-self-updates-checkbox + label::before,
-#domain-settings-local-checkbox + label::before {
-  float: none;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
 
 #enable-ssh-item {
   background-image: url('/images/ssh-icon.svg');
@@ -854,11 +856,6 @@
   margin: -1rem 1rem -1rem -0.5rem;
 }
 
-#network-settings-wlan-show-password-wrap span {
-  margin-left: -2rem;
-}
-
-#network-settings-wlan-show-password-wrap span,
 #network-settings-wifi .network-settings-wrap span {
   width: 14rem;
   display: inline-block;
@@ -910,6 +907,8 @@
 }
 
 /* stylelint-disable no-descending-specificity */
+.network-settings-wrap input:not([type]),
+.network-settings-wrap input[type=''],
 .network-settings-wrap input[type='password'],
 .network-settings-wrap input[type='text'],
 .network-select,
@@ -917,13 +916,15 @@
   display: block;
   margin: 1rem;
 }
-/* stylelint-enable no-descending-specificity */
 
+.network-settings-wrap input:not([type]),
+.network-settings-wrap input[type=''],
 .network-settings-wrap input[type='password'],
 .network-settings-wrap input[type='text'],
 .network-select {
   width: 18rem;
 }
+/* stylelint-enable no-descending-specificity */
 
 /* stylelint-disable-next-line no-descending-specificity */
 .user-form input {
@@ -946,8 +947,13 @@
   color: #f95;
 }
 
+/* stylelint-disable no-descending-specificity */
+.network-settings-wrap input:not([type]),
+.network-settings-wrap input[type=''],
 .network-settings-wrap input[type='text'],
 .network-settings-wrap input[type='password'],
+.user-form input:not([type]),
+.user-form input[type=''],
 .user-form input[type='text'],
 .user-form input[type='password'],
 .user-form input[type='email'] {
@@ -958,11 +964,14 @@
   padding: 0.5rem;
 }
 
+.user-form input:not([type]),
+.user-form input[type=''],
 .user-form input[type='text'],
 .user-form input[type='password'],
 .user-form input[type='email'] {
   margin: 1rem auto;
 }
+/* stylelint-enable no-descending-specificity */
 
 /* stylelint-disable no-descending-specificity */
 .network-button,
@@ -1025,10 +1034,6 @@
 .localization-select:disabled,
 .network-select:disabled {
   background-color: #48779a;
-}
-
-#network-settings-wlan-show-password-wrap {
-  grid-column: 2 / 3;
 }
 
 #edit-user-form {

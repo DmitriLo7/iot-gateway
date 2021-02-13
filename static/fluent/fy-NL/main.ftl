@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wifi
 network-settings-wifi = Wifi
-network-settings-home-network-image =
-    .alt = Thúsnetwurk
-network-settings-internet-image =
-    .alt = Ynternet
 network-settings-configure = Konfigurearje
-network-settings-internet-wan = Ynternet (WAN)
-network-settings-wan-mode = Modus
-network-settings-home-network-lan = Thúsnetwurk (LAN)
-network-settings-wifi-wlan = Wifi (WLAN)
 network-settings-ip-address = IP-adres
 network-settings-dhcp = Automatysk (DHCP)
 network-settings-static = Hânmjittich (Statysk IP-adres)
-network-settings-pppoe = Bridge (PPPoE)
 network-settings-static-ip-address = Statysk IP-adres
 network-settings-network-mask = Netwurkmask
 network-settings-gateway = Gateway
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Wachtwurd
 network-settings-show-password = Wachtwurd toane
 network-settings-connect = Ferbine
-network-settings-username = Brûkersnamme
-network-settings-password = Wachtwurd
-network-settings-router-ip = IP-adres router
-network-settings-dhcp-server = DHCP-server
-network-settings-enable-wifi = Wifi ynskeakelje
-network-settings-network-name = Netwurknamme (SSID)
 wireless-connected = Ferbûn
 wireless-icon =
     .alt = Wifi-netwurk
 network-settings-changing = Netwurkynstellingen wizigje. Dit kan efkes duorje.
 failed-ethernet-configure = Ethernet ynstelle mislearre.
 failed-wifi-configure = Wifi ynstelle mislearre.
-failed-wan-configure = WAN ynstelle mislearre.
-failed-lan-configure = LAN ynstelle mislearre.
-failed-wlan-configure = WLAN ynstelle mislearre.
 
 ## User Settings
 
@@ -295,6 +277,8 @@ Lock = Slot
 BarometricPressureSensor = Barometryske druksensor
 Custom = Oanpast Thing
 Thing = Thing
+AirQualitySensor = Loftkwaliteitssensor
+SmokeSensor = Reekmelder
 
 ## Properties
 
@@ -326,6 +310,9 @@ unknown = Unbekend
 active = Aktyf
 inactive = Ynaktyf
 humidity = Fochtichheid
+concentration = Konsintraasje
+density = Tichtens
+smoke = Reek
 
 ## Domain Setup
 
@@ -407,6 +394,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -447,7 +436,6 @@ events-not-found = Dit Thing hat gjin barrens.
 
 add-addons =
     .aria-label = Nije add-ons sykje
-author-unknown = Unbekend
 disable = Utskeakele
 enable = Ynskeakele
 by = troch
@@ -530,8 +518,8 @@ tunnel-setup-welcome = Wolkom
 tunnel-setup-choose-address = Kies in befeilige webadres foar jo gateway:
 tunnel-setup-input-subdomain =
     .placeholder = subdomein
-tunnel-setup-opt-in = Hâld my op de hichte oer nije mooglikheden en bydragen.
-tunnel-setup-privacy-policy = Privacybelied
+tunnel-setup-email-opt-in = Hâld my op de hichte mei nijs oer WebThings.
+tunnel-setup-agree-privacy-policy = Ynstimme mei it <a data-l10n-name="tunnel-setup-privacy-policy-link">Privacybelied</a> en de <a data-l10n-name="tunnel-setup-tos-link">Servicebetingsten</a> fan WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Opeasktoken
 tunnel-setup-error = Der is in flater bard by it ynstellen fan it subdomein.
@@ -561,20 +549,6 @@ local-token-header = Lokale tokentsjinst
 local-token-your-token = Jo lokale token is <a data-l10n-name="local-token-jwt">JSON Web-token</a>.
 local-token-use-it = Brûk dizze om befeilige mei de gateway te praten, mei <a data-l10n-name="local-token-bearer-type">Bearer-type-autorisaasje</a>.
 local-token-copy-token = Token kopiearje
-
-## Router Setup Page
-
-router-setup-title = Routerynstellingen — { -webthings-gateway-brand }
-router-setup-header = Meitsje in wifi-ferbining
-router-setup-input-ssid =
-    .placeholder = Netwurknamme
-router-setup-input-password =
-    .placeholder = Wachtwurd
-router-setup-input-confirm-password =
-    .placeholder = Befêstigje wachtwurd
-router-setup-create =
-    .value = Oanmeitsje
-router-setup-password-mismatch = Wachtwurden moatte oerienkomme
 
 ## Wi-Fi Setup Page
 
@@ -607,9 +581,6 @@ connecting-skipped =
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Wifi-netwurk meitsje — { -webthings-gateway-brand }
-creating-header = Wifi-netwurk meitsje…
-creating-content =
     Ferbyn mei { $ssid } en it ynstelde wachtwurd,
     navigearje dêrnei nei { $gateway-link } of { $ip-link } yn jo webbrowser.
 

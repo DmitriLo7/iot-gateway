@@ -9,7 +9,7 @@
  */
 'use strict';
 
-const API = require('../api');
+const API = require('../api').default;
 const fluent = require('../fluent');
 const Utils = require('../utils');
 
@@ -43,7 +43,8 @@ class DiscoveredAddon {
   view() {
     let el;
     if (this.installed) {
-      el = `<span class="addon-discovery-settings-added" data-l10n-id="addon-discovery-added"></span>`;
+      el = `<span class="addon-discovery-settings-added"
+        data-l10n-id="addon-discovery-added"></span>`;
     } else {
       el = `
         <button id="addon-install-${Utils.escapeHtmlForIdClass(this.id)}"
@@ -65,10 +66,12 @@ class DiscoveredAddon {
             ${Utils.escapeHtml(this.description)}
           </span>
           <span class="addon-settings-author">
-            ${fluent.getMessage('by')} <a href="${this.homepageUrl}" target="_blank" rel="noopener">${Utils.escapeHtml(this.author)}</a>
+            ${fluent.getMessage('by')} <a href="${this.homepageUrl}" target="_blank"
+                                          rel="noopener">${Utils.escapeHtml(this.author)}</a>
           </span>
-          <span id="addon-license-${Utils.escapeHtmlForIdClass(this.id)}" class="addon-settings-license" 
-            data-license-href="${this.licenseUrl}" data-id="${Utils.escapeHtmlForIdClass(this.id)}">
+          <span id="addon-license-${Utils.escapeHtmlForIdClass(this.id)}"
+                class="addon-settings-license" data-license-href="${this.licenseUrl}"
+                data-id="${Utils.escapeHtmlForIdClass(this.id)}">
             (${fluent.getMessage('license')})
           </span>
         </div>
@@ -86,12 +89,14 @@ class DiscoveredAddon {
 
     if (!this.installed) {
       const button = document.getElementById(
-        `addon-install-${Utils.escapeHtmlForIdClass(this.id)}`);
+        `addon-install-${Utils.escapeHtmlForIdClass(this.id)}`
+      );
       button.addEventListener('click', this.handleInstall.bind(this));
     }
 
     const licenseButton = document.getElementById(
-      `addon-license-${Utils.escapeHtmlForIdClass(this.id)}`);
+      `addon-license-${Utils.escapeHtmlForIdClass(this.id)}`
+    );
     licenseButton.addEventListener('click', this.handleLicense.bind(this));
   }
 
@@ -100,8 +105,7 @@ class DiscoveredAddon {
    */
   handleInstall(e) {
     const controlDiv = e.target.parentNode;
-    const installing =
-      `<span class="addon-discovery-settings-installing"
+    const installing = `<span class="addon-discovery-settings-installing"
              data-l10n-id="addon-discovery-installing"></span>`;
     controlDiv.innerHTML = installing;
 
@@ -122,8 +126,7 @@ class DiscoveredAddon {
       })
       .catch((err) => {
         console.error(`Failed to install add-on: ${this.id}\n${err}`);
-        const el =
-          `<span class="addon-discovery-settings-install-failed"
+        const el = `<span class="addon-discovery-settings-install-failed"
                  data-l10n-id="addon-discovery-failed"></span>`;
         controlDiv.innerHTML = el;
       });
@@ -143,7 +146,7 @@ class DiscoveredAddon {
           modalContainer.id = 'media-modal';
           const modalFrame = document.createElement('div');
           modalFrame.className = 'media-modal-frame';
-          const content = `<div class="media-modal-close" 
+          const content = `<div class="media-modal-close"
             id="modal-close-button"></div>
             <div class="media-modal-content">
             <p id="media-modal-text"></p></div>`;
@@ -151,13 +154,10 @@ class DiscoveredAddon {
           modalContainer.appendChild(modalFrame);
           document.body.appendChild(modalContainer);
           const modalCloseBtn = document.getElementById('modal-close-button');
-          modalCloseBtn.addEventListener(
-            'click',
-            () => {
-              modal = document.getElementById('media-modal');
-              modal.parentNode.removeChild(modal);
-            }
-          );
+          modalCloseBtn.addEventListener('click', () => {
+            modal = document.getElementById('media-modal');
+            modal.parentNode.removeChild(modal);
+          });
           fetch(licenseUrl)
             .then((response) => {
               return response.text();
@@ -166,14 +166,14 @@ class DiscoveredAddon {
               document.getElementById('media-modal-text').innerText = data;
             })
             .catch(() => {
-              document.getElementById('media-modal-text').innerText =
-                fluent.getMessage('failed-read-file');
+              document.getElementById('media-modal-text').innerText = fluent.getMessage(
+                'failed-read-file'
+              );
             });
         }
       });
     }
   }
-
 }
 
 module.exports = DiscoveredAddon;

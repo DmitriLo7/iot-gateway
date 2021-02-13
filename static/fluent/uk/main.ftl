@@ -34,7 +34,7 @@ add-things =
 ## Floorplan
 
 upload-floorplan = Завантажити план приміщення…
-upload-floorplan-hint = (рекомендовано, у форматі .svg)
+upload-floorplan-hint = (рекомендовано у форматі .svg)
 
 ## Top-Level Settings
 
@@ -53,7 +53,7 @@ settings-developer = Розробник
 
 domain-settings-local-label = Локальний доступ
 domain-settings-local-update = Оновіть назву хоста
-domain-settings-remote-access = Віддалений доступ
+domain-settings-remote-access = Зовнішній доступ
 domain-settings-local-name =
     .placeholder = шлюз
 
@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Домашня мережа
-network-settings-internet-image =
-    .alt = Інтернет
 network-settings-configure = Налаштувати
-network-settings-internet-wan = Інтернет (WAN)
-network-settings-wan-mode = Режим
-network-settings-home-network-lan = Домашня мережа (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = IP-адреса
 network-settings-dhcp = Автоматичний (DHCP)
 network-settings-static = Ручний (статичний IP)
-network-settings-pppoe = Міст (PPPoE)
 network-settings-static-ip-address = Статична IP-адреса
 network-settings-network-mask = Маска мережі
 network-settings-gateway = Шлюз
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Пароль
 network-settings-show-password = Показати пароль
 network-settings-connect = З'єднатися
-network-settings-username = Ім'я користувача
-network-settings-password = Пароль
-network-settings-router-ip = IP-адреса маршрутизатора
-network-settings-dhcp-server = DHCP-сервер
-network-settings-enable-wifi = Увімкнути Wi-Fi
-network-settings-network-name = Назва мережі (SSID)
 wireless-connected = З'єднано
 wireless-icon =
     .alt = Мережа Wi-Fi
 network-settings-changing = Зміна налаштувань мережі. Це може тривати хвильку.
 failed-ethernet-configure = Не вдалося налаштувати Ethernet.
 failed-wifi-configure = Не вдалося налаштувати Wi-Fi.
-failed-wan-configure = Не вдалося налаштувати WAN.
-failed-lan-configure = Не вдалося налаштувати локальну мережу (LAN).
-failed-wlan-configure = Не вдалося налаштувати WLAN.
 
 ## User Settings
 
@@ -182,7 +164,7 @@ developer-settings-create-local-authorization = Створити локальн�
 add-rule =
     .aria-label = Створити нове правило
 rules = Правила
-rules-create-rule-hint = Правил не створено. Натисніть +, щоби створити правило.
+rules-create-rule-hint = Правил не створено. Натисніть +, щоб створити правило.
 rules-rule-name = Назва правила
 rules-customize-rule-name-icon =
     .alt = Налаштувати назву правила
@@ -191,14 +173,14 @@ rules-preview-button =
     .alt = Попередній перегляд
 rules-delete-icon =
     .alt = Видалити
-rules-drag-hint = Перетягніть сюди свої пристрої, щоби почати створювати правило
+rules-drag-hint = Перетягніть сюди свої пристрої, щоб почати створювати правило
 rules-drag-input-hint = Додати пристрій як входовий
 rules-drag-output-hint = Додати пристрій як виходовий
 rules-scroll-left =
     .alt = Прокрутити ліворуч
 rules-scroll-right =
     .alt = Прокрутити праворуч
-rules-delete-prompt = Перетягніть пристрій сюди, щоби відʼєднати
+rules-delete-prompt = Перетягніть пристрій сюди, щоб відʼєднати
 rules-delete-dialog = Ви дійсно хочете вилучити це правило назавжди?
 rules-delete-cancel =
     .value = Скасувати
@@ -230,7 +212,7 @@ rule-name = Назва правила
 add-log =
     .aria-label = Створити новий журнал
 logs = Журнали
-logs-create-log-hint = Журнали не створено. Натисніть +, щоби створити журнал.
+logs-create-log-hint = Журнали не створено. Натисніть +, щоб створити журнал.
 logs-device = Пристрій
 logs-device-select =
     .aria-label = Пристрій журналу
@@ -294,6 +276,7 @@ BarometricPressureSensor = Барометричний датчик тиску
 Custom = Власна річ
 Thing = Річ
 AirQualitySensor = Датчик якості повітря
+SmokeSensor = Датчик диму
 
 ## Properties
 
@@ -327,10 +310,11 @@ inactive = Неактивний
 humidity = Вологість
 concentration = Насиченість
 density = Щільність
+smoke = Дим
 
 ## Domain Setup
 
-tunnel-setup-reclaim-domain = Схоже, ви вже зареєстрували цей піддомен. Щоби відновити доступ до нього, <a data-l10n-name="tunnel-setup-reclaim-domain-click-here">натисніть сюди</a>.
+tunnel-setup-reclaim-domain = Схоже, ви вже зареєстрували цей піддомен. Щоб відновити доступ до нього, <a data-l10n-name="tunnel-setup-reclaim-domain-click-here">натисніть сюди</a>.
 check-email-for-token = Будь ласка, перевірте вашу електронну пошту на наявність токена відновлення та вставте його вище.
 reclaim-failed = Не вдалося відновити доступ до домену.
 subdomain-already-used = Цей піддомен вже використовується. Будь ласка, виберіть інший.
@@ -415,6 +399,8 @@ abbrev-minute = хв.
 abbrev-second = с
 abbrev-millisecond = мс
 abbrev-foot = фут
+abbrev-micrograms-per-cubic-meter = мкг/м³
+abbrev-hectopascal = ГПа
 
 ## New Thing View
 
@@ -446,7 +432,7 @@ new-web-thing-from = з
 
 ## Empty div Messages
 
-no-things = Ще немає пристроїв. Натисніть +, щоби знайти наявні пристрої.
+no-things = Ще немає пристроїв. Натисніть +, щоб знайти наявні пристрої.
 thing-not-found = Річ не знайдено.
 action-not-found = Дію не знайдено.
 events-not-found = Ця річ не має подій.
@@ -455,7 +441,6 @@ events-not-found = Ця річ не має подій.
 
 add-addons =
     .aria-label = Знайти нові додатки
-author-unknown = Невідомо
 disable = Вимкнути
 enable = Увімкнути
 by = від
@@ -538,8 +523,8 @@ tunnel-setup-welcome = Вітаємо
 tunnel-setup-choose-address = Виберіть безпечну мережну адресу для вашого шлюзу:
 tunnel-setup-input-subdomain =
     .placeholder = піддомен
-tunnel-setup-opt-in = Повідомляйте мене про нові функції та можливості допомоги проєкту.
-tunnel-setup-privacy-policy = Політика приватності
+tunnel-setup-email-opt-in = Тримати мене в курсі новин про WebThings.
+tunnel-setup-agree-privacy-policy = Погодьтеся з <a data-l10n-name="tunnel-setup-privacy-policy-link">Політикою приватности</a> та <a data-l10n-name="tunnel-setup-tos-link">Умовами обслуговування</a> WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Токен відновлення
 tunnel-setup-error = Під час налаштування піддомену сталася помилка.
@@ -570,20 +555,6 @@ local-token-your-token = Вашим локальним токеном є цей 
 local-token-use-it = Застосовуйте його для безпечного звʼязку зі шлюзом, <a data-l10n-name="local-token-bearer-type">надавши дозвіл на зʼєднання цьому типу носія</a>.
 local-token-copy-token = Копіювати маркер
 
-## Router Setup Page
-
-router-setup-title = Налаштування маршрутизатора — { -webthings-gateway-brand }
-router-setup-header = Створити нову мережу Wi-Fi
-router-setup-input-ssid =
-    .placeholder = Назва мережі
-router-setup-input-password =
-    .placeholder = Пароль
-router-setup-input-confirm-password =
-    .placeholder = Підтвердити пароль
-router-setup-create =
-    .value = Створити
-router-setup-password-mismatch = Паролі повинні збігатися
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Налаштування Wi-Fi — { -webthings-gateway-brand }
@@ -601,16 +572,13 @@ wifi-setup-skip = Пропустити
 
 connecting-title = Зʼєднання з Wi-Fi — { -webthings-gateway-brand }
 connecting-header = Зʼєднання з Wi-Fi…
-connecting-connect = Переконайтеся, що ви зʼєднані з однаковою мережею та перейдіть до { $gateway-link } у своєму браузері, щоби продовжити налаштування.
+connecting-connect = Переконайтеся, що ви зʼєднані з однаковою мережею та перейдіть до { $gateway-link } у своєму браузері, щоб продовжити налаштування.
 connecting-warning = Примітка. Якщо ви не можете завантажити { $domain }, знайдіть IP-адресу шлюзу на вашому маршрутизаторі.
 connecting-header-skipped = Налаштування Wi-Fi пропущено
-connecting-skipped = Зараз шлюз запускається. Перейдіть до { $gateway-link } у вашому браузері, зʼєднавшись з тією ж мережею, що і шлюз, щоби продовжити налаштування.
+connecting-skipped = Зараз шлюз запускається. Перейдіть до { $gateway-link } у вашому браузері, зʼєднавшись з тією ж мережею, що і шлюз, щоб продовжити налаштування.
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Створення Wi-Fi мережі — { -webthings-gateway-brand }
-creating-header = Створення Wi-Fi мережі…
-creating-content = З'єднайтеся з { $ssid } за допомогою паролю, який ви щойно створили, а потім перейдіть до { $gateway-link } або { $ip-link } у вашому браузері.
 
 ## UI Updates
 

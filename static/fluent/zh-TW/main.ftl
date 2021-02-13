@@ -66,19 +66,10 @@ network-settings-ethernet = 乙太網路
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = 家庭網路
-network-settings-internet-image =
-    .alt = 網際網路
 network-settings-configure = 設定
-network-settings-internet-wan = 網際網路（WAN）
-network-settings-wan-mode = 模式
-network-settings-home-network-lan = 家庭網路（LAN）
-network-settings-wifi-wlan = Wi-Fi（WLAN）
 network-settings-ip-address = IP 地址
 network-settings-dhcp = 自動取得（DHCP）
 network-settings-static = 手動設定（靜態 IP）
-network-settings-pppoe = 橋接連線（PPPoE）
 network-settings-static-ip-address = 靜態 IP 地址
 network-settings-network-mask = 網路遮罩
 network-settings-gateway = 閘道器
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = 密碼
 network-settings-show-password = 顯示密碼
 network-settings-connect = 連線
-network-settings-username = 使用者名稱
-network-settings-password = 密碼
-network-settings-router-ip = 路由器 IP 地址
-network-settings-dhcp-server = DHCP 伺服器
-network-settings-enable-wifi = 開啟 Wi-Fi
-network-settings-network-name = 無線網路名稱（SSID）
 wireless-connected = 已連線
 wireless-icon =
     .alt = Wi-Fi 網路
 network-settings-changing = 正在更改網路設定，可能要花一分鐘時間。
 failed-ethernet-configure = 乙太網路設定失敗。
 failed-wifi-configure = Wi-Fi 設定失敗。
-failed-wan-configure = WAN 設定失敗。
-failed-lan-configure = LAN 設定失敗。
-failed-wlan-configure = WLAN 設定失敗。
 
 ## User Settings
 
@@ -294,6 +276,7 @@ BarometricPressureSensor = 氣壓感應器
 Custom = 自訂 Thing
 Thing = Thing
 AirQualitySensor = 空氣品質感應器
+SmokeSensor = 煙霧感應器
 
 ## Properties
 
@@ -327,6 +310,7 @@ inactive = 未啟用
 humidity = 濕度
 concentration = 濃度
 density = 密度
+smoke = 煙霧
 
 ## Domain Setup
 
@@ -401,6 +385,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -441,7 +427,6 @@ events-not-found = 這個 thing 沒有事件。
 
 add-addons =
     .aria-label = 尋找新的附加元件
-author-unknown = 未知
 disable = 停用
 enable = 啟用
 by = 作者:
@@ -524,8 +509,8 @@ tunnel-setup-welcome = 歡迎
 tunnel-setup-choose-address = 為您的閘道器挑選一組安全網址:
 tunnel-setup-input-subdomain =
     .placeholder = 子網域
-tunnel-setup-opt-in = 有新功能推出或貢獻機會時通知我。
-tunnel-setup-privacy-policy = 隱私權保護政策
+tunnel-setup-email-opt-in = 隨時告訴我 WebThings 的新鮮事。
+tunnel-setup-agree-privacy-policy = 同意 WebThings 的<a data-l10n-name="tunnel-setup-privacy-policy-link">隱私權保護政策</a>與<a data-l10n-name="tunnel-setup-tos-link">服務條款</a>。
 tunnel-setup-input-reclamation-token =
     .placeholder = 網域取回代碼
 tunnel-setup-error = 設定子網域時發生錯誤。
@@ -556,20 +541,6 @@ local-token-your-token = 下列 <a data-l10n-name="local-token-jwt">JSON Web Tok
 local-token-use-it = 請使用此授權碼，透過 <a data-l10n-name="local-token-bearer-type">Bearer-type 驗證方式</a>來安全地與閘道器溝通。
 local-token-copy-token = 複製 Token
 
-## Router Setup Page
-
-router-setup-title = 路由器設定 — { -webthings-gateway-brand }
-router-setup-header = 建立新 Wi-Fi 網路
-router-setup-input-ssid =
-    .placeholder = 網路名稱
-router-setup-input-password =
-    .placeholder = 密碼
-router-setup-input-confirm-password =
-    .placeholder = 確認密碼
-router-setup-create =
-    .value = 建立
-router-setup-password-mismatch = 密碼必須符合
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Wi-Fi 設定 — { -webthings-gateway-brand }
@@ -594,9 +565,6 @@ connecting-skipped = 正在啟動閘道器。請確認您連線到與閘道器�
 
 ## Creating Wi-Fi Network Page
 
-creating-title = 建立 Wi-Fi 網路 — { -webthings-gateway-brand }
-creating-header = 建立 Wi-Fi 網路…
-creating-content = 請使用您剛剛建立的密碼連線到 { $ssid } 網路，然後使用瀏覽器開啟 { $gateway-link } 或 { $ip-link }。
 
 ## UI Updates
 

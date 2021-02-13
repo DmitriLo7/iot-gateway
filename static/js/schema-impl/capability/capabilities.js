@@ -25,13 +25,13 @@ const MultiLevelSwitch = require('./multi-level-switch');
 const OnOffSwitch = require('./on-off-switch');
 const PushButton = require('./push-button');
 const SmartPlug = require('./smart-plug');
+const SmokeSensor = require('./smoke-sensor');
 const TemperatureSensor = require('./temperature-sensor');
 const Thermostat = require('./thermostat');
 const Thing = require('./thing');
 const VideoCamera = require('./video-camera');
 
-function createThingFromCapability(
-  capability, thingModel, description, format) {
+function createThingFromCapability(capability, thingModel, description, format) {
   if (capability) {
     switch (capability) {
       case 'OnOffSwitch':
@@ -58,6 +58,8 @@ function createThingFromCapability(
         return new MotionSensor(thingModel, description, format);
       case 'LeakSensor':
         return new LeakSensor(thingModel, description, format);
+      case 'SmokeSensor':
+        return new SmokeSensor(thingModel, description, format);
       case 'PushButton':
         return new PushButton(thingModel, description, format);
       case 'VideoCamera':
@@ -110,6 +112,8 @@ function getClassFromCapability(capability) {
       return 'motion-sensor';
     case 'LeakSensor':
       return 'leak-sensor';
+    case 'SmokeSensor':
+      return 'smoke-sensor';
     case 'PushButton':
       return 'push-button';
     case 'VideoCamera':
@@ -135,4 +139,4 @@ function getClassFromCapability(capability) {
   return '';
 }
 
-module.exports = {createThingFromCapability, getClassFromCapability};
+module.exports = { createThingFromCapability, getClassFromCapability };

@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Rețea domestică
-network-settings-internet-image =
-    .alt = Internet
 network-settings-configure = Configurează
-network-settings-internet-wan = Internet (WAN)
-network-settings-wan-mode = Mod
-network-settings-home-network-lan = Rețea domestică (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = Adresă IP
 network-settings-dhcp = Automată (DHCP)
 network-settings-static = Manuală (IP static)
-network-settings-pppoe = Punte (PPPoE)
 network-settings-static-ip-address = Adresă IP statică
 network-settings-network-mask = Mască de rețea
 network-settings-gateway = Poartă de acces
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Parolă
 network-settings-show-password = Afișează parola
 network-settings-connect = Conectare
-network-settings-username = Nume de utilizator
-network-settings-password = Parolă
-network-settings-router-ip = Adresa IP a routerului
-network-settings-dhcp-server = Server DHCP
-network-settings-enable-wifi = Activează Wi-Fi
-network-settings-network-name = Denumire rețea (SSID)
 wireless-connected = Conectat
 wireless-icon =
     .alt = Rețea Wi-Fi
 network-settings-changing = Se modifică setările rețelei. Poate dura un minut.
 failed-ethernet-configure = Eroare la configurarea Ethernet-ului.
 failed-wifi-configure = Configurarea Wi-Fi a eșuat.
-failed-wan-configure = Configurarea WAN a eșuat.
-failed-lan-configure = Configurarea LAN a eșuat.
-failed-wlan-configure = Configurarea WLAN a eșuat.
 
 ## User Settings
 
@@ -450,7 +432,6 @@ events-not-found = Acest lucru nu are evenimente.
 
 add-addons =
     .aria-label = Caută suplimente noi
-author-unknown = Necunoscut
 disable = Dezactivează
 enable = Activează
 by = de
@@ -533,8 +514,6 @@ tunnel-setup-welcome = Bine ai venit
 tunnel-setup-choose-address = Alege o adresă web securizată pentru poarta de acces:
 tunnel-setup-input-subdomain =
     .placeholder = subdomeniu
-tunnel-setup-opt-in = Ține-mă la curent cu funcționalități noi și oportunități de a aduce contribuții.
-tunnel-setup-privacy-policy = Politică de confidențialitate
 tunnel-setup-input-reclamation-token =
     .placeholder = Jeton de revendicare
 tunnel-setup-error = A apărut o eroare la setarea subdomeniului.
@@ -565,20 +544,6 @@ local-token-your-token = Jetonul tău local este acest <a data-l10n-name="local-
 local-token-use-it = De folosit pentru comunicații securizate cu poarta de acces, cu <a data-l10n-name="local-token-bearer-type">Autorizație tip la purtător</a>.
 local-token-copy-token = Copiază jetonul
 
-## Router Setup Page
-
-router-setup-title = Configurare router — { -webthings-gateway-brand }
-router-setup-header = Creează o rețea Wi-Fi nouă
-router-setup-input-ssid =
-    .placeholder = Denumire rețea
-router-setup-input-password =
-    .placeholder = Parolă
-router-setup-input-confirm-password =
-    .placeholder = Confirmă parola
-router-setup-create =
-    .value = Creează
-router-setup-password-mismatch = Parolele trebuie să se potrivească
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Configurare Wi-Fi — { -webthings-gateway-brand }
@@ -603,9 +568,6 @@ connecting-skipped = Poarta de acces este acum inițializată. Navighează pe { 
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Crearea unei rețele Wi-Fi — { -webthings-gateway-brand }
-creating-header = Se creează rețeaua Wi-Fi…
-creating-content = Conectează-te la { $ssid } cu parola pe care tocmai ai creat-o și apoi navighează la { $gateway-link } sau { $ip-link } în browserul web.
 
 ## UI Updates
 

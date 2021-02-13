@@ -66,19 +66,10 @@ network-settings-ethernet = Ether-rwyd
 network-settings-wifi-image =
     .alt = Diwifr
 network-settings-wifi = Diwifr
-network-settings-home-network-image =
-    .alt = Rhwydwaith Cartref
-network-settings-internet-image =
-    .alt = Rhyngrwyd
 network-settings-configure = Ffurfweddu
-network-settings-internet-wan = Rhyngrwyd (WAN)
-network-settings-wan-mode = Modd
-network-settings-home-network-lan = Rhwydwaith Cartref (LAN)
-network-settings-wifi-wlan = Diwifr (WLAN)
 network-settings-ip-address = Cyfeiriad IP
 network-settings-dhcp = Awtomatig (DHCP)
 network-settings-static = Â Llaw (IP Statig)
-network-settings-pppoe = Pont (PPPoE)
 network-settings-static-ip-address = Cyfeiriad IP statig
 network-settings-network-mask = Masg rhwydwaith
 network-settings-gateway = Porth
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Cyfrinair
 network-settings-show-password = Dangos cyfrinair
 network-settings-connect = Cysylltu
-network-settings-username = Enw Defnyddiwr
-network-settings-password = Cyfrinair
-network-settings-router-ip = Cyfeiriad IP llwybrydd
-network-settings-dhcp-server = Gweinydd DHCP
-network-settings-enable-wifi = Galluogi'r Diwifr
-network-settings-network-name = Enw'r rhwydwaith (SSID)
 wireless-connected = Wedi cysylltu
 wireless-icon =
     .alt = Rhwydwaith Diwifr
 network-settings-changing = Newid gosodiadau'r rhwydwaith. Gall hyn gymryd peth amser.
 failed-ethernet-configure = Wedi methu ffurfweddu'r ether-rwyd.
 failed-wifi-configure = Wedi methu ffurfweddu'r diwifr.
-failed-wan-configure = Wedi methu ffurfweddu'r WAN.
-failed-lan-configure = Wedi methu ffurfweddu'r LAN.
-failed-wlan-configure = Wedi methu ffurfweddu'r WLAN.
 
 ## User Settings
 
@@ -294,6 +276,7 @@ BarometricPressureSensor = Synhwyrydd Pwysedd Barometrig
 Custom = Peth Cyfaddas
 Thing = Peth
 AirQualitySensor = Synhwyrydd ansawdd awyr
+SmokeSensor = Synhwyrydd Mwg
 
 ## Properties
 
@@ -327,6 +310,7 @@ inactive = Anweithredol
 humidity = Lleithder
 concentration = Crynodiad
 density = Dwysedd
+smoke = Mwg
 
 ## Domain Setup
 
@@ -436,6 +420,8 @@ abbrev-minute = m
 abbrev-second = e
 abbrev-millisecond = me
 abbrev-foot = tr
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -476,7 +462,6 @@ events-not-found = Nid oes gan y peth hwn unrhyw ddigwyddiad.
 
 add-addons =
     .aria-label = Canfod Ychwanegion Newydd
-author-unknown = Anhysbys
 disable = Analluogi
 enable = Galluogi
 by = gan
@@ -559,8 +544,8 @@ tunnel-setup-welcome = Croeso
 tunnel-setup-choose-address = Dewis cyfeiriad gwe diogel ar gyfer eich porth:
 tunnel-setup-input-subdomain =
     .placeholder = is-barth
-tunnel-setup-opt-in = Rhannwch y wybodaeth ddiweddaraf i mi am nodweddion newydd a chyfleoedd i gyfrannu.
-tunnel-setup-privacy-policy = Polisi Preifatrwydd
+tunnel-setup-email-opt-in = Gadewch i mi wybod am y newyddion am WebThings.
+tunnel-setup-agree-privacy-policy = Cytuno i <a data-l10n-name="tunnel-setup-privacy-policy-link">Bolisi Preifatrwydd</a> a <a data-l10n-name="tunnel-setup-tos-link">Thelerau Gwasanaeth </a> WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Tocyn Adfer
 tunnel-setup-error = Digwyddodd gwall wrth osod yr is-barth.
@@ -591,20 +576,6 @@ local-token-your-token = Eich tocyn lleol yw'r <a data-l10n-name="local-token-jw
 local-token-use-it = Defnyddiwch ef i gyfathrebu â'r porth yn ddiogel, gyda <a data-l10n-name="local-token-bearer-type">Awdurdodi Math Cludwr</a>.
 local-token-copy-token = Copïwch y Tocyn
 
-## Router Setup Page
-
-router-setup-title = Gosodiad y Llwybrydd - { -webthings-gateway-brand }
-router-setup-header = Creu rhwydwaith diwifr newydd
-router-setup-input-ssid =
-    .placeholder = Enw'r rhwydwaith
-router-setup-input-password =
-    .placeholder = Cyfrinair
-router-setup-input-confirm-password =
-    .placeholder = Cadarnhau'r cyfrinair
-router-setup-create =
-    .value = Creu
-router-setup-password-mismatch = Rhaid i'r cyfrineiriau gydweddu.
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Gosodiad Diwifr- { -webthings-gateway-brand }
@@ -629,9 +600,6 @@ connecting-skipped = Mae'r porth nawr yn cael ei gychwyn. Yn eich porwr gwe, ewc
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Yn Creu Rhwydwaith Diwifr - { -webthings-gateway-brand }
-creating-header = Yn creu rhwydwaith diwifr…
-creating-content = Cysylltwch â { $ssid } gyda'r cyfrinair rydych newydd ei greu, yna ewch i { $gateway-link } neu { $ip-link } yn eich porwr gwe.
 
 ## UI Updates
 

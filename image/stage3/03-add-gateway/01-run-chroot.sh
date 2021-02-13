@@ -2,6 +2,9 @@
 
 set -x
 
+# Install Python add-on bindings
+pip3 install -r "/home/${FIRST_USER_NAME}/webthings/gateway/requirements.txt"
+
 su - ${FIRST_USER_NAME} << 'EOF'
 set -e -x
 
@@ -12,9 +15,9 @@ export npm_config_arch=armv6l
 export npm_config_target_arch=arm
 
 # build the gateway
-cd ~/mozilla-iot/gateway
+cd ~/webthings/gateway
 npm ci
-./node_modules/.bin/webpack
+npm run build
 npm prune --production
 
 # link the gateway-addon library to make it global
@@ -31,7 +34,7 @@ PYTHON_VERSIONS="$(python2 --version 2>&1 | cut -d' ' -f2 | cut -d. -f1-2),$(pyt
 V8_VERSION="$(node -e 'console.log(process.config.variables.node_module_version)')"
 ARCHITECTURE="linux-arm"
 ADDON_LIST_URL="$(node -e "console.log(require('config').get('addonManager.listUrls')[0])")"
-ADDONS_DIR="$HOME/.mozilla-iot/addons"
+ADDONS_DIR="$HOME/.webthings/addons"
 
 # Install default add-ons
 mkdir -p "${ADDONS_DIR}"

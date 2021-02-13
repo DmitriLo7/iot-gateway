@@ -7,7 +7,7 @@
  */
 'use strict';
 
-const API = require('./api');
+const API = require('./api').default;
 const fluent = require('./fluent');
 
 function setupForm() {
@@ -31,11 +31,11 @@ function setupForm() {
     const passwordValue = password.value;
     const totpValue = totp.value;
 
-    API.login(emailValue, passwordValue, totpValue).
-      then(() => {
+    API.login(emailValue, passwordValue, totpValue)
+      .then(() => {
         window.location.href = '/';
-      }).
-      catch((err) => {
+      })
+      .catch((err) => {
         if (typeof err.message === 'string' && err.message[0] === '{') {
           err = JSON.parse(err.message);
         }
@@ -56,8 +56,7 @@ function setupForm() {
           totp.focus();
         } else {
           errorSubmission.classList.remove('hidden');
-          errorSubmission.textContent =
-            fluent.getMessage('login-wrong-credentials');
+          errorSubmission.textContent = fluent.getMessage('login-wrong-credentials');
         }
       });
   });

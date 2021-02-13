@@ -1,14 +1,14 @@
-const UserProfile = require('../src/user-profile');
-UserProfile.init();
-
-const db = require('../src/db');
+const migrate = require('../build/migrate').default;
+const db = require('../build/db').default;
 db.open();
 
-const AddonManager = require('../src/addon-manager');
+const AddonManager = require('../build/addon-manager').default;
 
-UserProfile.migrate().then(() => {
-  return AddonManager.updateAddons({
-    forceUpdateBinary: true,
-    skipLoad: true,
-  });
-}).catch(console.error);
+migrate()
+  .then(() => {
+    return AddonManager.updateAddons({
+      forceUpdateBinary: true,
+      skipLoad: true,
+    });
+  })
+  .catch(console.error);

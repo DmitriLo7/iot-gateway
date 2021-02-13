@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Home Network
-network-settings-internet-image =
-    .alt = Internet
 network-settings-configure = Configure
-network-settings-internet-wan = Internet (WAN)
-network-settings-wan-mode = Mode
-network-settings-home-network-lan = Home Network (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = IP address
 network-settings-dhcp = Automatic (DHCP)
 network-settings-static = Manual (Static IP)
-network-settings-pppoe = Bridge (PPPoE)
 network-settings-static-ip-address = Static IP address
 network-settings-network-mask = Network mask
 network-settings-gateway = Gateway
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Password
 network-settings-show-password = Show password
 network-settings-connect = Connect
-network-settings-username = Username
-network-settings-password = Password
-network-settings-router-ip = Router IP address
-network-settings-dhcp-server = DHCP server
-network-settings-enable-wifi = Enable Wi-Fi
-network-settings-network-name = Network name (SSID)
 wireless-connected = Connected
 wireless-icon =
     .alt = Wi-Fi Network
 network-settings-changing = Changing network settings. This may take a minute.
-failed-ethernet-configure = Failed to configure ethernet.
+failed-ethernet-configure = Failed to configure Ethernet.
 failed-wifi-configure = Failed to configure Wi-Fi.
-failed-wan-configure = Failed to configure WAN.
-failed-lan-configure = Failed to configure LAN.
-failed-wlan-configure = Failed to configure WLAN.
 
 ## User Settings
 
@@ -293,7 +275,8 @@ Lock = Lock
 BarometricPressureSensor = Barometric Pressure Sensor
 Custom = Custom Thing
 Thing = Thing
-AirQualitySensor = Air quality sensor
+AirQualitySensor = Air Quality Sensor
+SmokeSensor = Smoke Sensor
 
 ## Properties
 
@@ -327,6 +310,7 @@ inactive = Inactive
 humidity = Humidity
 concentration = Concentration
 density = Density
+smoke = Smoke
 
 ## Domain Setup
 
@@ -408,6 +392,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -448,7 +434,6 @@ events-not-found = This thing has no events.
 
 add-addons =
     .aria-label = Find New Add-ons
-author-unknown = Unknown
 disable = Disable
 enable = Enable
 by = by
@@ -531,8 +516,8 @@ tunnel-setup-welcome = Welcome
 tunnel-setup-choose-address = Choose a secure web address for your gateway:
 tunnel-setup-input-subdomain =
     .placeholder = subdomain
-tunnel-setup-opt-in = Please keep me updated about new features and contribution opportunities.
-tunnel-setup-privacy-policy = Privacy Policy
+tunnel-setup-email-opt-in = Keep me updated with news about WebThings.
+tunnel-setup-agree-privacy-policy = Agree to the WebThings <a data-l10n-name="tunnel-setup-privacy-policy-link">Privacy Policy</a> and <a data-l10n-name="tunnel-setup-tos-link">Terms of Service</a>.
 tunnel-setup-input-reclamation-token =
     .placeholder = Reclamation Token
 tunnel-setup-error = An error occurred while setting up the subdomain.
@@ -563,20 +548,6 @@ local-token-your-token = Your local token is this <a data-l10n-name="local-token
 local-token-use-it = Use it to talk to the gateway securely, with <a data-l10n-name="local-token-bearer-type">Bearer-type Authorisation</a>.
 local-token-copy-token = Copy Token
 
-## Router Setup Page
-
-router-setup-title = Router Setup — { -webthings-gateway-brand }
-router-setup-header = Create a new Wi-Fi network
-router-setup-input-ssid =
-    .placeholder = Network name
-router-setup-input-password =
-    .placeholder = Password
-router-setup-input-confirm-password =
-    .placeholder = Confirm password
-router-setup-create =
-    .value = Create
-router-setup-password-mismatch = Passwords must match
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Wi-Fi Setup — { -webthings-gateway-brand }
@@ -601,9 +572,6 @@ connecting-skipped = The gateway is now being started. Navigate to { $gateway-li
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Creating Wi-Fi Network — { -webthings-gateway-brand }
-creating-header = Creating Wi-Fi network…
-creating-content = Please connect to { $ssid } with the password you just created, then navigate to { $gateway-link } or { $ip-link } in your web browser.
 
 ## UI Updates
 
@@ -613,7 +581,7 @@ ui-update-close = Close
 
 ## General Terms
 
-ok = Ok
+ok = OK
 ellipsis = …
 event-log = Event Log
 edit = Edit

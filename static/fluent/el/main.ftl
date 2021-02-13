@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Οικιακό δίκτυο
-network-settings-internet-image =
-    .alt = Διαδίκτυο
 network-settings-configure = Διαμόρφωση
-network-settings-internet-wan = Διαδίκτυο (WAN)
-network-settings-wan-mode = Λειτουργία
-network-settings-home-network-lan = Οικιακό δίκτυο (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = Διεύθυνση IP
 network-settings-dhcp = Αυτόματη (DHCP)
 network-settings-static = Μη αυτόματη (Στατική IP)
-network-settings-pppoe = Γέφυρα (PPPoE)
 network-settings-static-ip-address = Στατική διεύθυνση IP
 network-settings-network-mask = Μάσκα δικτύου
 network-settings-gateway = Πύλη
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Κωδικός πρόσβασης
 network-settings-show-password = Εμφάνιση κωδικού πρόσβασης
 network-settings-connect = Σύνδεση
-network-settings-username = Όνομα χρήστη
-network-settings-password = Κωδικός πρόσβασης
-network-settings-router-ip = IP διεύθυνση router
-network-settings-dhcp-server = Διακομιστής DHCP
-network-settings-enable-wifi = Ενεργοποίηση Wi-Fi
-network-settings-network-name = Όνομα δικτύου (SSID)
 wireless-connected = Συνδέθηκε
 wireless-icon =
     .alt = Δίκτυο Wi-Fi
 network-settings-changing = Αλλαγή ρυθμίσεων δικτύου. Ίσως χρειαστεί λίγη ώρα.
 failed-ethernet-configure = Αποτυχία διαμόρφωσης Ethernet.
 failed-wifi-configure = Αποτυχία διαμόρφωσης Wi-Fi.
-failed-wan-configure = Αποτυχία διαμόρφωσης WAN.
-failed-lan-configure = Αποτυχία διαμόρφωσης LAN.
-failed-wlan-configure = Αποτυχία διαμόρφωσης WLAN.
 
 ## User Settings
 
@@ -293,6 +275,8 @@ Lock = Κλειδαριά
 BarometricPressureSensor = Αισθητήρας βαρομετρικής πίεσης
 Custom = Προσαρμοσμένη συσκευή
 Thing = Συσκευή
+AirQualitySensor = Αισθητήρας ποιότητας αέρα
+SmokeSensor = Αισθητήρας καπνού
 
 ## Properties
 
@@ -324,6 +308,9 @@ unknown = Άγνωστο
 active = Ενεργό
 inactive = Ανενεργό
 humidity = Υγρασία
+concentration = Συγκέντρωση
+density = Πυκνότητα
+smoke = Καπνός
 
 ## Domain Setup
 
@@ -405,6 +392,8 @@ abbrev-minute = λ
 abbrev-second = δ
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -445,7 +434,6 @@ events-not-found = Αυτή η συσκευή δεν έχει συμβάντα.
 
 add-addons =
     .aria-label = Εύρεση νέων προσθέτων
-author-unknown = Άγνωστο
 disable = Απενεργοποίηση
 enable = Ενεργοποίηση
 by = από
@@ -528,8 +516,8 @@ tunnel-setup-welcome = Καλώς ορίσατε
 tunnel-setup-choose-address = Επιλέξτε μια ασφαλή διεύθυνση ιστού για την πύλη σας:
 tunnel-setup-input-subdomain =
     .placeholder = υποτομέας
-tunnel-setup-opt-in = Επιθυμώ να ενημερώνομαι για νέες δυνατότητες και ευκαιρίες συνεισφοράς.
-tunnel-setup-privacy-policy = Πολιτική απορρήτου
+tunnel-setup-email-opt-in = Να ενημερώνομαι για ειδήσεις σχετικά με το WebThings.
+tunnel-setup-agree-privacy-policy = Συμφωνώ με την <a data-l10n-name="tunnel-setup-privacy-policy-link">Πολιτική απορρήτου</a> και τους <a data-l10n-name="tunnel-setup-tos-link">Όρους υπηρεσίας</a> του WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Token ανάκτησης
 tunnel-setup-error = Προέκυψε σφάλμα κατά τη ρύθμιση του υποτομέα.
@@ -560,20 +548,6 @@ local-token-your-token = Το τοπικό σας token είναι αυτό <a d
 local-token-use-it = Χρησιμοποιήστε το για ασφαλή επικοινωνία με την πύλη, με <a data-l10n-name="local-token-bearer-type">Εξουσιοδότηση τύπου Bearer</a>.
 local-token-copy-token = Αντιγραφή token
 
-## Router Setup Page
-
-router-setup-title = Ρύθμιση router — { -webthings-gateway-brand }
-router-setup-header = Δημιουργία νέου δικτύου Wi-Fi
-router-setup-input-ssid =
-    .placeholder = Όνομα δικτύου
-router-setup-input-password =
-    .placeholder = Κωδικός πρόσβασης
-router-setup-input-confirm-password =
-    .placeholder = Επιβεβαίωση κωδικού πρόσβασης
-router-setup-create =
-    .value = Δημιουργία
-router-setup-password-mismatch = Οι κωδικοί πρόσβασης πρέπει να ταιριάζουν.
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Ρύθμιση Wi-Fi — { -webthings-gateway-brand }
@@ -598,9 +572,6 @@ connecting-skipped = Η πύλη εκκινείται τώρα. Μεταβείτ
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Δημιουργία δικτύου Wi-Fi — { -webthings-gateway-brand }
-creating-header = Δημιουργία δικτύου Wi-Fi…
-creating-content = Παρακαλούμε συνδεθείτε στο { $ssid } με τον κωδικό πρόσβασης που μόλις δημιουργήσατε και έπειτα, μεταβείτε στο { $gateway-link } ή στο { $ip-link } από το πρόγραμμα περιήγησής σας.
 
 ## UI Updates
 

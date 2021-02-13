@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Rede doméstica
-network-settings-internet-image =
-    .alt = Internet
 network-settings-configure = Configurar
-network-settings-internet-wan = Internet (WAN)
-network-settings-wan-mode = Modo
-network-settings-home-network-lan = Rede doméstica (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = Endereço IP
 network-settings-dhcp = Automático (DHCP)
 network-settings-static = Manual (IP estático)
-network-settings-pppoe = Bridge (PPPoE)
 network-settings-static-ip-address = Endereço IP estático
 network-settings-network-mask = Máscara de rede
 network-settings-gateway = Gateway
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Senha
 network-settings-show-password = Mostrar senha
 network-settings-connect = Conectar
-network-settings-username = Nome de usuário
-network-settings-password = Senha
-network-settings-router-ip = Endereço IP do roteador
-network-settings-dhcp-server = Servidor DHCP
-network-settings-enable-wifi = Ativar Wi-Fi
-network-settings-network-name = Nome da rede (SSID)
 wireless-connected = Conectado
 wireless-icon =
     .alt = Rede Wi-Fi
 network-settings-changing = Alterando as configurações de rede. Isso pode demorar um pouco.
 failed-ethernet-configure = Falha ao configurar ethernet.
 failed-wifi-configure = Falha ao configurar Wi-Fi.
-failed-wan-configure = Falha ao configurar WAN.
-failed-lan-configure = Falha ao configurar LAN.
-failed-wlan-configure = Falha ao configurar WLAN.
 
 ## User Settings
 
@@ -110,7 +92,7 @@ create-user =
 user-settings-input-name =
     .placeholder = Nome
 user-settings-input-email =
-    .placeholder = E-mail
+    .placeholder = Email
 user-settings-input-password =
     .placeholder = Senha
 user-settings-input-totp =
@@ -294,6 +276,7 @@ BarometricPressureSensor = Sensor de pressão barométrica
 Custom = Coisa personalizada
 Thing = Coisa
 AirQualitySensor = Sensor de qualidade do ar
+SmokeSensor = Sensor de fumaça
 
 ## Properties
 
@@ -327,15 +310,16 @@ inactive = Desativado
 humidity = Umidade
 concentration = Concentração
 density = Densidade
+smoke = Fumaça
 
 ## Domain Setup
 
 tunnel-setup-reclaim-domain = Parece que você já cadastrou este subdomínio. Para recuperar, <a data-l10n-name="tunnel-setup-reclaim-domain-click-here">clique aqui</a>.
-check-email-for-token = Verifique se recebeu o token de recuperação por e-mail e cole-o acima.
+check-email-for-token = Verifique se recebeu o token de recuperação por email e cole-o acima.
 reclaim-failed = Não foi possível recuperar o domínio.
 subdomain-already-used = Este subdomínio já está sendo usado. Escolha um diferente.
 invalid-subdomain = Subdomínio inválido.
-invalid-email = Endereço de e-mail inválido.
+invalid-email = Endereço de email inválido.
 invalid-reclamation-token = Token de recuperação inválido.
 domain-success = Sucesso! Aguarde enquanto redirecionamos você…
 issuing-error = Erro ao emitir certificado. Tente novamente.
@@ -408,6 +392,8 @@ abbrev-minute = min
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = pés
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -448,7 +434,6 @@ events-not-found = Esta coisa não tem eventos.
 
 add-addons =
     .aria-label = Encontrar mais extensões
-author-unknown = Desconhecido
 disable = Desativar
 enable = Ativar
 by = por
@@ -531,8 +516,8 @@ tunnel-setup-welcome = Boas-vindas
 tunnel-setup-choose-address = Escolha um endereço web seguro para seu gateway:
 tunnel-setup-input-subdomain =
     .placeholder = subdomínio
-tunnel-setup-opt-in = Mantenha-me atualizado sobre novos recursos e oportunidades de contribuição.
-tunnel-setup-privacy-policy = Política de privacidade
+tunnel-setup-email-opt-in = Mantenha-me atualizado com novidades sobre WebThings.
+tunnel-setup-agree-privacy-policy = Concordo com a <a data-l10n-name="tunnel-setup-privacy-policy-link">Política de privacidade</a> e os <a data-l10n-name="tunnel-setup-tos-link">Termos do serviço</a> do WebThings.
 tunnel-setup-input-reclamation-token =
     .placeholder = Token de recuperação
 tunnel-setup-error = Ocorreu um erro ao configurar o subdomínio.
@@ -563,20 +548,6 @@ local-token-your-token = Seu token local é este <a data-l10n-name="local-token-
 local-token-use-it = Use para se comunicar com o gateway de forma segura, com <a data-l10n-name="local-token-bearer-type">autorização de tipo portador (Bearer)</a>.
 local-token-copy-token = Copiar token
 
-## Router Setup Page
-
-router-setup-title = Configuração do roteador — { -webthings-gateway-brand }
-router-setup-header = Criar uma nova rede Wi-Fi
-router-setup-input-ssid =
-    .placeholder = Nome da rede
-router-setup-input-password =
-    .placeholder = Senha
-router-setup-input-confirm-password =
-    .placeholder = Confirmar senha
-router-setup-create =
-    .value = Criar
-router-setup-password-mismatch = As senhas devem coincidir
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Configuração de Wi-Fi — { -webthings-gateway-brand }
@@ -601,9 +572,6 @@ connecting-skipped = O gateway está sendo iniciado agora. Acesse { $gateway-lin
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Criação de rede Wi-Fi — { -webthings-gateway-brand }
-creating-header = Criando rede Wi-Fi…
-creating-content = Conecte-se a { $ssid } com a senha que você acabou de criar, depois acesse { $gateway-link } ou { $ip-link } no seu navegador.
 
 ## UI Updates
 

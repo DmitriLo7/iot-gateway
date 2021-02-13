@@ -66,19 +66,10 @@ network-settings-ethernet = Ethernet
 network-settings-wifi-image =
     .alt = Wi-Fi
 network-settings-wifi = Wi-Fi
-network-settings-home-network-image =
-    .alt = Domácí síť
-network-settings-internet-image =
-    .alt = Internet
 network-settings-configure = Nastavit
-network-settings-internet-wan = Internet (WAN)
-network-settings-wan-mode = Režim
-network-settings-home-network-lan = Domácí síť (LAN)
-network-settings-wifi-wlan = Wi-Fi (WLAN)
 network-settings-ip-address = IP adresa
 network-settings-dhcp = Automaticky (DHCP)
 network-settings-static = Ručně (statická IP)
-network-settings-pppoe = Most (PPPoE)
 network-settings-static-ip-address = Statická IP adresa
 network-settings-network-mask = Maska sítě
 network-settings-gateway = Gateway
@@ -87,21 +78,12 @@ network-settings-wifi-password =
     .placeholder = Heslo
 network-settings-show-password = Zobrazit heslo
 network-settings-connect = Připojit
-network-settings-username = Uživatelské jméno
-network-settings-password = Heslo
-network-settings-router-ip = IP adresa routeru
-network-settings-dhcp-server = DHCP server
-network-settings-enable-wifi = Povolit Wi-Fi
-network-settings-network-name = Název sítě (SSID)
 wireless-connected = Připojeno
 wireless-icon =
     .alt = Síť Wi-Fi
 network-settings-changing = Probíhá změna nastavení sítě. Může to chvíli trvat.
 failed-ethernet-configure = Konfigurace ethernetu se nezdařila.
 failed-wifi-configure = Konfigurace Wi-Fi se nezdařila.
-failed-wan-configure = Konfigurace WAN se nezdařila.
-failed-lan-configure = Konfigurace LAN se nezdařila.
-failed-wlan-configure = Konfigurace WLAN se nezdařila.
 
 ## User Settings
 
@@ -293,6 +275,8 @@ Lock = Zámek
 BarometricPressureSensor = Senzor atmosferického tlaku
 Custom = Vlastní věc
 Thing = Věc
+AirQualitySensor = Senzor kvality vzduchu
+SmokeSensor = Senzor kouře
 
 ## Properties
 
@@ -323,6 +307,10 @@ jammed = Zaseknuté
 unknown = Neznámý
 active = Aktivní
 inactive = Neaktivní
+humidity = Vlhkost
+concentration = Koncentrace
+density = Hustota
+smoke = Kouř
 
 ## Domain Setup
 
@@ -411,6 +399,8 @@ abbrev-minute = m
 abbrev-second = s
 abbrev-millisecond = ms
 abbrev-foot = ft
+abbrev-micrograms-per-cubic-meter = µg/m³
+abbrev-hectopascal = hPa
 
 ## New Thing View
 
@@ -451,7 +441,6 @@ events-not-found = Tato věc nemá žádné události.
 
 add-addons =
     .aria-label = Najít nové doplňky
-author-unknown = Neznámý
 disable = Zakázat
 enable = Povolit
 by = od
@@ -534,8 +523,8 @@ tunnel-setup-welcome = Vítejte
 tunnel-setup-choose-address = Vyberte zabezpečenou webovou adresu vaší gateway:
 tunnel-setup-input-subdomain =
     .placeholder = subdoména
-tunnel-setup-opt-in = Informujte mě prosím o nových funkcích a možnostech přispívání.
-tunnel-setup-privacy-policy = Zásady ochrany osobních údajů
+tunnel-setup-email-opt-in = Informujte mě o novinkách ve WebThings.
+tunnel-setup-agree-privacy-policy = Souhlasíte se zásadami projektu WebThings pro <a data-l10n-name="tunnel-setup-privacy-policy-link">ochranu osobních údajů</a> a <a data-l10n-name="tunnel-setup-tos-link">podmínkami poskytování služby</a>.
 tunnel-setup-input-reclamation-token =
     .placeholder = Token pro opětovné získání
 tunnel-setup-error = Při nastavování subdomény došlo k chybě.
@@ -566,20 +555,6 @@ local-token-your-token = Váš místní token je tento <a data-l10n-name="local-
 local-token-use-it = Můžete ho použít k bezpečné komunikaci s gateway pomocí ověření typu <a data-l10n-name="local-token-bearer-type">Bearer</a>.
 local-token-copy-token = Zkopírovat token
 
-## Router Setup Page
-
-router-setup-title = Nastavení routeru - { -webthings-gateway-brand }
-router-setup-header = Vytvoření nové Wi-Fi sítě
-router-setup-input-ssid =
-    .placeholder = Název sítě
-router-setup-input-password =
-    .placeholder = Heslo
-router-setup-input-confirm-password =
-    .placeholder = Heslo znova
-router-setup-create =
-    .value = Vytvořit
-router-setup-password-mismatch = Heslo se musí shodovat
-
 ## Wi-Fi Setup Page
 
 wifi-setup-title = Nastavení Wi-Fi - { -webthings-gateway-brand }
@@ -604,9 +579,6 @@ connecting-skipped = Gateway je nyní spuštěna. Připojte se ke stejné síti 
 
 ## Creating Wi-Fi Network Page
 
-creating-title = Vytváření sítě Wi-Fi - { -webthings-gateway-brand }
-creating-header = Vytváření sítě Wi-Fi…
-creating-content = Připojte se k { $ssid } pomocí hesla, které jste právě vytvořili, a potom ve webovém prohlížeči přejděte na { $gateway-link } nebo { $ip-link }.
 
 ## UI Updates
 
